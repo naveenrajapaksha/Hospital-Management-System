@@ -1,0 +1,471 @@
+
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Search Bar Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; 
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px; 
+}
+
+.search-btn {
+    padding: 8px 12px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Full-screen Header with Changing Images */
+.header {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+.header-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Login Button */
+nav ul li .login-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+nav ul li .login-btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Signup Button */
+nav ul li .signup-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+nav ul li .signup-btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px;
+    background: #fff;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.more-btn:hover {
+    background: #0056b3;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 50px;
+}
+
+.testimonial-box {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Section */
+.faq {
+    text-align: center;
+    padding: 50px;
+    background: #fff;
+}
+
+.faq details {
+    margin: 10px auto;
+    max-width: 600px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq details summary {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* hero-container */
+.hero {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #f6f1f1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2216d1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #f7f4f4;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.hero h4 {
+    font-size: 1.2rem;
+    color: #06582a;
+    line-height: 1.6;
+}
+.hero-container{
+    color: white;
+    border: 3px solid rgba(243, 156, 18,1.0);
+    background-color: gray;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+/* hero-vision-container */
+.hero-vision {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #f6f1f1;
+    font-style: italic;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-vision h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #19182c;
+    font-style:normal ;
+
+}
+
+.hero-vision p{
+    font-size: 1.2rem;
+    color: #f7f4f4;
+    line-height: 1.6;
+    
+}
+
+.hero-vision-container{
+    color: white;
+    border: 3px solid blueviolet;
+    background-color: rgb(61, 89, 37);
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+/* hero-mission-container */
+.hero-mission {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #f6f1f1;
+    font-style: italic;
+}
+
+.hero-mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-mission h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2216d1;
+    font-style:normal ;
+
+}
+
+.hero-mission p{
+    font-size: 1.2rem;
+    color: #f7f4f4;
+    line-height: 1.6;
+    
+}
+
+.hero-mission-container{
+    color: white;
+    border: 3px solid black;
+    background-color: rgb(68, 32, 54);
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+.context-main{
+    height: 600px;
+    width: 100%;
+    background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/96e7a16fa59159c99bf07639/dentist-with-dentistry-tools-isolatedf-min.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+/* General Styling for the Service Section */
+#service_id {
+    margin-top: 50px; 
+    padding: 40px 0; 
+    background-color: #f9f9f9; 
+    text-align: center; 
+}
+
+.service-outer {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 0 20px; 
+}
+
+/* Make the entire box clickable */
+.service-link {
+    text-decoration: none; 
+    color: inherit; 
+    flex: 1; 
+    min-width: 23%; 
+    display: block; 
+}
+
+.service-inner {
+    height: 300px; 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 5px;
+    position: relative; 
+    overflow: hidden; 
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer; 
+}
+
+/* Overlay for Transparency */
+.service-inner::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Hover Effect for Overlay */
+.service-inner:hover::before {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+/* Styling for the Service Name */
+.service-inner h2 {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 1.5rem; 
+    font-family: "Rye", serif; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    z-index: 2; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    .service-outer {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .service-link {
+        min-width: 100%; 
+    }
+
+    .service-inner {
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .service-inner h2 {
+        font-size: 1.2rem; 
+    }
+}

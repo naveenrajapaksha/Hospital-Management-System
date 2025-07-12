@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #004080;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Branch Section */
+.branch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #004080;
+    transition: 0.3s;
+}
+
+.branch:hover {
+    transform: scale(1.02);
+}
+
+/* Branch Image */
+.branch img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Branch Information */
+.branch-info {
+    flex: 1;
+    text-align: left;
+}
+
+.branch-info h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.branch-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Google Map */
+.branch iframe {
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+    border: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .branch {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .branch img {
+        margin-bottom: 10px;
+    }
+
+    .branch-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .branch iframe {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hospital</title>
+    <link rel="stylesheet" >
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: url('images/register.jpg') no-repeat center center fixed !important;
+    background-size: cover !important; /* Ensure it covers the full screen */
+     /* Fallback color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let formData = new FormData(document.getElementById("registerForm"));
+
+            fetch("register.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                let messageDiv = document.getElementById("message");
+                messageDiv.innerHTML = data.message;
+                messageDiv.style.color = data.status === "success" ? "green" : "red";
+
+                if (data.status === "success") {
+                    setTimeout(() => {
+                        window.location.href = "loginf.php"; // Redirect after 2 seconds
+                    }, 2000);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #004080;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+p {
+    margin-top: 15px;
+}
+
+    </style>
+
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Sign Up</h2>
+    <div id="message"></div> <!-- Success/Error message will appear here -->
+
+    <form id="registerForm" onsubmit="submitForm(event)">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="role">Login As:</label>
+            <select name="role" id="role">
+                <option value="Admin">Admin</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Patient">Patient</option>
+            </select>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="loginf.php">Log in</a></p>
+</div>
+
+</body>
+</html>
+
+   
